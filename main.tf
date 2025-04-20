@@ -11,6 +11,6 @@ module "aurora_cluster" {
   instance_class     = "db.r6g.large"
   db_name            = "exampledb"
   username           = "auroraadmin"
-  secret_name        = "aurora-db-credentials1"
+  secret_name        = "aurora-db-credentials2"
   
 }
