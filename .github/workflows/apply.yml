@@ -36,5 +36,11 @@ jobs:
       - name: Initialize Terraform
         run: terraform init
 
+      - name: Install Checkov
+        run: pip install checkov
+
+      - name: Run Checkov with soft fail
+        run: checkov --directory . --soft-fail
+
       - name: Apply Terraform plan
         run: terraform apply -auto-approve
